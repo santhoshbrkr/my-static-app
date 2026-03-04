@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script data-main = "scripts/main" src = "scripts/require.js"></script>
+
+</head>
+<body>
+    <div class="container bg-color-success">
+        <br><br><br>
+        <div class="row">
+            <div class="col-4 form-control">
+                <label for="">Enter Date</label>
+            </div>
+            <div class="col-4 form-control">
+                <input type="date" id="datepick"  placeholder="dd/mm/yyyy">
+            </div>
+            <div class="col-4 form-control">
+                <button type="button" class="btn btn-success" onclick="getData()">Submit</button>
+            </div>
+        </div>
+        <div class="container">
+            <p class="h1">Santosh</p>
+            <p class="h2">Santosh</p>
+            <p class="h3">Santosh</p>
+            <p class="h4">Santosh</p>
+            <p class="h5">Santosh</p>
+            <p class="h6">Santosh</p>
+        </div>
+        <div class="container">
+            <h1 class="display-1">Display</h1>
+            <h1 class="display-2">Display</h1>
+            <h1 class="display-3">Display</h1>
+            <h1 class="display-4">Display</h1>
+            <h1 class="display-5">Display</h1>
+        </div>
+        <div class="container">
+            <dl>
+                <dt>HTML</dt>
+                <dd>-Hyper Text Markup Language</dd>
+                <dt>CSS</dt>
+                <dd>-Cascadint Style Sheet</dd>
+            </dl>
+        </div>
+        
+    </div>
+    <script>
+        function getData()
+        { 
+            let x=document.getElementById("datepick").value;
+            const dateArray=x.split("-")
+            let year=dateArray[0];
+            let month=dateArray[1];
+            let day=dateArray[2];
+            window.alert(year+month+day);
+        }
+
+    </script>
+</body>
+</html>
